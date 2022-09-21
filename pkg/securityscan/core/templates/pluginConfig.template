@@ -96,6 +96,8 @@ data:
         value: {{ .configDir }}
       {{- end }}
       imagePullPolicy: Always
+      nodeSelector:
+        kubernetes.io/os: linux
       securityContext:
         privileged: true
       volumeMounts:
